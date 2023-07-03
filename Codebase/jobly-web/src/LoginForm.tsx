@@ -3,19 +3,13 @@ import axios from 'axios';
 
 const SignupForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
     email: '',
-    password: '',
-    confirm_password: '',
+    password: ''
   });
 
   const [formErrors, setFormErrors] = useState({
-    firstname: '',
-    lastname: '',
     email: '',
-    password: '',
-    confirm_password: '',
+    password: ''
   });
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,18 +23,6 @@ const SignupForm: React.FC = () => {
   const validateForm = () => {
     let isValid = true;
     const newFormErrors:  { firstname: string; lastname: string; email: string; password: string; confirm_password: string; } = {firstname: "", lastname: "", email: "", password: "", confirm_password: ""};
-
-    // Validate firstname
-    if (!formData.firstname) {
-      isValid = false;
-      newFormErrors.firstname = 'First Name is required';
-    }
-
-    // Validate lastname
-    if (!formData.lastname) {
-      isValid = false;
-      newFormErrors.lastname = 'Last Name is required';
-    }
 
     // Validate email
     if (!formData.email) {
@@ -57,15 +39,6 @@ const SignupForm: React.FC = () => {
       newFormErrors.password = 'Password is required';
     }
 
-    // Validate confirm_password
-    if (!formData.confirm_password) {
-      isValid = false;
-      newFormErrors.confirm_password = 'Confirm Password is required';
-    } else if (formData.password !== formData.confirm_password) {
-      isValid = false;
-      newFormErrors.confirm_password = 'Passwords do not match';
-    }
-
     setFormErrors(newFormErrors);
     return isValid;
   };
@@ -76,9 +49,7 @@ const SignupForm: React.FC = () => {
     if (validateForm()) {
       // Perform API call using Axios or Fetch here
       try {
-        await axios.post('http://localhost:8080/user/signup', {
-          firstname: formData.firstname,
-          lastname: formData.lastname,
+        await axios.post('http://localhost:8080/user/signin', {
           email: formData.email,
           password: formData.password,
         });
@@ -86,7 +57,7 @@ const SignupForm: React.FC = () => {
         alert('Signup successful!');
       } catch (error) {
         // Handle error in form submission
-        alert('Signup failed. Please try again later.');
+        alert('Login failed. Please try again later.');
       }
     }
   };
@@ -103,33 +74,7 @@ const SignupForm: React.FC = () => {
       }}
     >
       <form onSubmit={handleSubmit}>
-        <h3 className="text-center mb-4">Signup</h3>
-        <div className="mb-3">
-          <input
-            type="text"
-            name="firstname"
-            className="form-control"
-            placeholder="First Name"
-            value={formData.firstname}
-            onChange={handleChange}
-          />
-          {formErrors.firstname && (
-            <div className="text-danger">{formErrors.firstname}</div>
-          )}
-        </div>
-        <div className="mb-3">
-          <input
-            type="text"
-            name="lastname"
-            className="form-control"
-            placeholder="Last Name"
-            value={formData.lastname}
-            onChange={handleChange}
-          />
-          {formErrors.lastname && (
-            <div className="text-danger">{formErrors.lastname}</div>
-          )}
-        </div>
+        <h3 className="text-center mb-4">Login</h3>
         <div className="mb-3">
           <input
             type="email"
@@ -154,19 +99,6 @@ const SignupForm: React.FC = () => {
           />
           {formErrors.password && (
             <div className="text-danger">{formErrors.password}</div>
-          )}
-        </div>
-        <div className="mb-3">
-          <input
-            type="password"
-            name="confirm_password"
-            className="form-control"
-            placeholder="Confirm Password"
-            value={formData.confirm_password}
-            onChange={handleChange}
-          />
-          {formErrors.confirm_password && (
-            <div className="text-danger">{formErrors.confirm_password}</div>
           )}
         </div>
         <button type="submit" className="btn btn-primary w-100">
