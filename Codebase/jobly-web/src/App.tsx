@@ -35,7 +35,7 @@ const App: React.FC = () => {
         <div className="row">
           {/* First column */}
           <div className="col-lg-8 text-center shadow-lg p-3 mb-5 bg-body rounded mt-5 pt-5">
-            <img src="jobly.jpeg" alt="jobly_screen" width="66%"/>
+            <img src="jobly.png" alt="jobly_screen" width="66%"/>
           </div>
 
           {/* Second column */}
