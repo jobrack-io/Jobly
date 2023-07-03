@@ -4,6 +4,8 @@ import com.jobly.api.model.User;
 import com.jobly.api.repository.UserRepository;
 import com.jobly.api.service.JwtUserDetailsService;
 import com.jobly.api.util.JwtTokenUtil;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/auth")
+@Tag(name = "Authentication Controller", description = "Endpoints for user authentication")
 public class AuthenticationController {
 
     protected final Log logger = LogFactory.getLog(getClass());
@@ -42,6 +45,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/login")
+    @Operation(summary = "Login User", description = "Authenticate a user and generate an access token.")
     public ResponseEntity<?> loginUser(@RequestParam("user_name") String username,
                                        @RequestParam("password") String password) {
         Map<String, Object> responseMap = new HashMap<>();
@@ -79,6 +83,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
+    @Operation(summary = "Register User", description = "Create a new user account.")
     public ResponseEntity<?> saveUser(@RequestParam("first_name") String firstName,
                                       @RequestParam("last_name") String lastName,
                                       @RequestParam("user_name") String userName, @RequestParam("email") String email
