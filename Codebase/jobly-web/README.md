@@ -1,6 +1,26 @@
-# Getting Started with Create React App
+## Jobly Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Jobly web is a reactJS application which interacts with various backend API services like Search Service, Job Alert Service, Notification Service, Career Roadmaps Service etc. 
+The web service has feature like: 
+
+    - User Management
+    - User Authentication
+    - User RBAC
+    - User Session Management
+    - User Dashboard
+    - Tagged Resumes [S3]
+    - Search UI
+    - CV Score
+    - Job Alert UI
+    - User Career Roadmap UI
+    - Applied Jobs
+        - Via Search
+        - Manually
+    - Saved Jobs
+    - Manual Roadmap
+    - Generative Roadmap
+    - Saved Roadmap
+    - Interview Questions
 
 ## Available Scripts
 
