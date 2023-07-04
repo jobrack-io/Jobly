@@ -16,6 +16,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,6 +28,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/auth")
 @Tag(name = "Authentication Controller", description = "Endpoints for user authentication")
+@CrossOrigin(origins = "*")
 public class AuthenticationController {
 
     protected final Log logger = LogFactory.getLog(getClass());

@@ -22,7 +22,7 @@ const SignupForm: React.FC = () => {
 
   const validateForm = () => {
     let isValid = true;
-    const newFormErrors:  { firstname: string; lastname: string; email: string; password: string; confirm_password: string; } = {firstname: "", lastname: "", email: "", password: "", confirm_password: ""};
+    const newFormErrors:  { email: string; password: string;} = {email: "", password: ""};
 
     // Validate email
     if (!formData.email) {
