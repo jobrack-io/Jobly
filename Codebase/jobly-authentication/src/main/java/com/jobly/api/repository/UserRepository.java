@@ -1,6 +1,5 @@
 package com.jobly.api.repository;
 
-import com.jobly.api.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 

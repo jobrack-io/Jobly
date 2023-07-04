@@ -1,4 +1,4 @@
-package com.jobly.api.model;
+package com.jobly.api.repository;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
