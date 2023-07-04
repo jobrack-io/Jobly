@@ -1,2 +1,4 @@
 **/.DS_Store
 Codebase/jobly-authentication/target
+Codebase/jobly-web/package-lock.json
+Codebase/jobly-web/node_modules
