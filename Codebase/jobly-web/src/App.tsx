@@ -7,7 +7,7 @@ import AboutUsPage from './pages/AboutUs';
 import ContactUsPage from './pages/ContactUs';
 import ErrorPage from './pages/ErrorPage';
 
-import './index.css';
+import './assets/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
 

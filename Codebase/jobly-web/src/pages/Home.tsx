@@ -1,11 +1,7 @@
-import { Link } from 'react-router-dom';
-
-import HomeNavigation from '../components/HomeNavigation';
-import Footer from '../components/Footer';
 import SignupForm from '../components/SignupForm';
 import LoginForm from '../components/LoginForm';
 
-const App: React.FC = () => {
+function HomePage() {
   return (
       <>
       {/* First column */}
@@ -22,4 +18,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default HomePage;

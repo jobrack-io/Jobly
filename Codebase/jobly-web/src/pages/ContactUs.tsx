@@ -1,4 +1,5 @@
 import '@popperjs/core/dist/cjs/popper.js';
+import '../assets/contactus.css';
 
 function ContactUsPage() {
   return (
@@ -7,24 +8,24 @@ function ContactUsPage() {
         <p>We would love to hear from you. Fill out the form below to get in touch with us.</p>
 
         <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 contact-form">
                 <form action="#" method="POST">
                     <div className="mb-3">
-                        <label for="name" className="form-label">Your Name</label>
+                        <label htmlFor="name" className="form-label">Your Name</label>
                         <input type="text" className="form-control" id="name" name="name" required/>
                     </div>
                     <div className="mb-3">
-                        <label for="email" class="form-label">Your Email</label>
+                        <label htmlFor="email" className="form-label">Your Email</label>
                         <input type="email" className="form-control" id="email" name="email" required/>
                     </div>
                     <div className="mb-3">
-                        <label for="message" class="form-label">Message</label>
+                        <label htmlFor="message" className="form-label">Message</label>
                         <textarea className="form-control" id="message" name="message" required></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>
-            <div className="col-md-6">
+            <div id="address" className="col-md-6 contact">
                 <h4>Address</h4>
                 <p>4 Southern Avenue, Feltham, Middlesex, TW14 9ND</p>
                 <h4>Phone</h4>
