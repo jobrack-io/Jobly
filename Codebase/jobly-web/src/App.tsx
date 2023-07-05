@@ -5,6 +5,7 @@ import HomeLayout from './layouts/Home';
 import HomePage from './pages/Home';
 import AboutUsPage from './pages/AboutUs';
 import ContactUsPage from './pages/ContactUs';
+import ErrorPage from './pages/ErrorPage';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout/>,
+    errorElement: <ErrorPage/>,
     children: [
       { path: '/', element: <HomePage/> },
       { path: '/about-us', element: <AboutUsPage/> },
