@@ -5,7 +5,7 @@ function AboutUsPage(){
     <>
       <section className="py-5">
         <div className="container">
-          <h2 className="mb-4">Jobly</h2>
+          <h3 className="mb-4">Jobly</h3>
           <p>
             Introducing Jobly, your ultimate companion in the exhilarating quest for your dream job! Our delightful web application is meticulously designed to uplift and empower job candidates like you, providing a range of exceptional features to enhance your job search journey.
           </p>

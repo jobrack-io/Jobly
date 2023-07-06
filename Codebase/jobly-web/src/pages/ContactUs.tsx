@@ -4,7 +4,7 @@ import '../assets/contactus.css';
 function ContactUsPage() {
   return (
     <main className="container mt-5">
-        <h1>Contact Us</h1>
+        <h3>Contact Us</h3>
         <p>We would love to hear from you. Fill out the form below to get in touch with us.</p>
 
         <div className="row">

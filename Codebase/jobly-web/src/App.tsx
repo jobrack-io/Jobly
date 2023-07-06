@@ -6,6 +6,7 @@ import HomePage from './pages/Home';
 import AboutUsPage from './pages/AboutUs';
 import ContactUsPage from './pages/ContactUs';
 import ErrorPage from './pages/ErrorPage';
+import SearchPage from './pages/SearchPage';
 
 import './assets/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       { path: '/', element: <HomePage/> },
+      { path: '/search', element: <SearchPage/> },
       { path: '/about-us', element: <AboutUsPage/> },
       { path: '/contact-us', element: <ContactUsPage/> },
     ]
