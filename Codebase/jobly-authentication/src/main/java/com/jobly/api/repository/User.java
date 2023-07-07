@@ -4,22 +4,30 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("users")
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
     @Id
-    @Indexed(unique = true)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long employee_id;
+
+    @Column(name = "email")
     private String email;
+    @Column(name = "firstName")
     private String firstName;
+    @Column(name = "lastName")
     private String lastName;
+    @Column(name = "password")
     private String password;
+    @Column(name = "role")
     private String role;
 
 }
