@@ -8,7 +8,7 @@ public class LoginResponseModel {
     private boolean error;
     private String message;
 
-    private String userName;
+    private String email;
 
     private String token;
 

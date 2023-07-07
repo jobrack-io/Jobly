@@ -55,13 +55,13 @@ public class AuthenticationController {
         LoginResponseModel loginResponseModel = new LoginResponseModel();
         try {
 
-            Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequestModel.getUserName(),
+            Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequestModel.getEmail(),
                     loginRequestModel.getPassword()));
             if (auth.isAuthenticated()) {
                 logger.info("Logged In");
-                UserDetails userDetails = userDetailsService.loadUserByUsername(loginRequestModel.getUserName());
+                UserDetails userDetails = userDetailsService.loadUserByUsername(loginRequestModel.getEmail());
                 String token = jwtTokenUtil.generateToken(userDetails);
-                loginResponseModel.setUserName(userDetails.getUsername());
+                loginResponseModel.setEmail(userDetails.getUsername());
                 loginResponseModel.setError(false);
                 loginResponseModel.setMessage("Logged In");
                 loginResponseModel.setToken(token);
@@ -103,7 +103,7 @@ public class AuthenticationController {
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         User user = modelMapper.map(userDetails, User.class);
         user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
-        UserDetails userDt = userDetailsService.createUserDetails(user.getUserName(), user.getPassword());
+        UserDetails userDt = userDetailsService.createUserDetails(user.getEmail(), user.getPassword());
         String token = jwtTokenUtil.generateToken(userDt);
         userRepository.save(user);
         CreateUserResponseModel returnValue =new CreateUserResponseModel();

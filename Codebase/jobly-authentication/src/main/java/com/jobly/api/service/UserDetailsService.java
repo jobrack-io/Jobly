@@ -20,12 +20,12 @@ public class UserDetailsService implements org.springframework.security.core.use
         this.userRepository = userRepository;
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        com.jobly.api.repository.User user = userRepository.findUserByUsername(username);
+
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        com.jobly.api.repository.User user = userRepository.findUserByEmail(email);
         List<GrantedAuthority> authorityList = new ArrayList<>();
         authorityList.add(new SimpleGrantedAuthority("USER_ROLE"));
-        return new User(user.getUserName(), user.getPassword(), authorityList);
+        return new User(user.getEmail(), user.getPassword(), authorityList);
     }
 
     public UserDetails createUserDetails(String userName, String password) {
@@ -33,4 +33,5 @@ public class UserDetailsService implements org.springframework.security.core.use
         authorityList.add(new SimpleGrantedAuthority("USER_ROLE"));
         return new User(userName, password, authorityList);
     }
+
 }
