@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function HomeNavigation(){
+function MainNavigation(){
   return (
     <>
       {/* Fixed top navigation bar */}
@@ -18,6 +18,9 @@ function HomeNavigation(){
                 <Link className="nav-link" to="/">Home</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/search">Job Search</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/about-us">About</Link>
               </li>
               <li className="nav-item">
@@ -31,4 +34,4 @@ function HomeNavigation(){
   );
 };
 
-export default HomeNavigation;
+export default MainNavigation;
