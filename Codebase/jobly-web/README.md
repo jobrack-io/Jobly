@@ -22,6 +22,9 @@ The web service has feature like:
     - Saved Roadmap
     - Interview Questions
 
+## Packages required
+### `npm install react-router-dom`
+
 ## Available Scripts
 
 In the project directory, you can run:
