@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/user")
 @Tag(name = "Authentication Controller", description = "Endpoints for user authentication")
 @CrossOrigin(origins = "*")
 public class AuthenticationController {
@@ -93,7 +93,7 @@ public class AuthenticationController {
 
 
 
-    @PostMapping(path = "/register",consumes = {MediaType.APPLICATION_JSON_VALUE },
+    @PostMapping(path = "/signup",consumes = {MediaType.APPLICATION_JSON_VALUE },
             produces = { MediaType.APPLICATION_JSON_VALUE }
     )
     @Operation(summary = "Register User", description = "Create a new user account.")
