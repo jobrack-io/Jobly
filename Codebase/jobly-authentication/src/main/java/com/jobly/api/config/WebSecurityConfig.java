@@ -45,7 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf().disable().authorizeRequests().antMatchers("/auth/*","/swagger-ui/**", "/v3/api-docs/**").permitAll().
+        httpSecurity.csrf().disable().authorizeRequests().antMatchers("/user/singin","/user/signup","/swagger-ui/**", "/v3/api-docs/**").permitAll().
                 anyRequest().authenticated().and().exceptionHandling().
                 authenticationEntryPoint((request, response, authException) -> {
             Map<String, Object> responseMap = new HashMap<>();

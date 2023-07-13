@@ -47,7 +47,7 @@ public class AuthenticationController {
         this.jwtTokenUtil = jwtTokenUtil;
     }
 
-    @PostMapping(path = "/login",consumes = {MediaType.APPLICATION_JSON_VALUE },
+    @PostMapping(path = "/singin",consumes = {MediaType.APPLICATION_JSON_VALUE },
             produces = { MediaType.APPLICATION_JSON_VALUE }
     )
     @Operation(summary = "Login User", description = "Login User")
