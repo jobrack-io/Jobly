@@ -7,7 +7,7 @@ import lombok.Data;
 @Data
 public class CreateUserResponseModel {
 
-	private String firstName;
+	private String first_name;
 
 	private String message;
 

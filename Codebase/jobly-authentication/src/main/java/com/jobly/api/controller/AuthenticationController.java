@@ -106,7 +106,7 @@ public class AuthenticationController {
         String token = jwtTokenUtil.generateToken(userDt);
         userRepository.save(user);
         CreateUserResponseModel returnValue =new CreateUserResponseModel();
-        returnValue.setEmail(user.getFirstName());
+        returnValue.setFirst_name(user.getFirst_name());
         returnValue.setEmail(user.getEmail());
         returnValue.setMessage("Account created successfully");
         returnValue.setToken(token);
