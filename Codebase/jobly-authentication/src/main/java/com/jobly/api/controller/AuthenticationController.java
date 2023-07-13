@@ -30,7 +30,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 @Tag(name = "Authentication Controller", description = "Endpoints for user authentication")
-@CrossOrigin(origins = "*")
 public class AuthenticationController {
 
     protected final Log logger = LogFactory.getLog(getClass());
@@ -47,7 +46,7 @@ public class AuthenticationController {
         this.jwtTokenUtil = jwtTokenUtil;
     }
 
-    @PostMapping(path = "/singin",consumes = {MediaType.APPLICATION_JSON_VALUE },
+    @PostMapping(path = "/signin",consumes = {MediaType.APPLICATION_JSON_VALUE },
             produces = { MediaType.APPLICATION_JSON_VALUE }
     )
     @Operation(summary = "Login User", description = "Login User")

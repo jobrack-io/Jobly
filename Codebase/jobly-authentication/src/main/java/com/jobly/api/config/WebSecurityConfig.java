@@ -14,6 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.util.HashMap;
@@ -37,20 +38,28 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(jwtUserDetailsService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
+    @Autowired
+    private CorsConfig corsConfigurationSource;
+
     @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
 
+
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf().disable().authorizeRequests().antMatchers("/user/singin","/user/signup","/swagger-ui/**", "/v3/api-docs/**").permitAll().
+            httpSecurity.cors().configurationSource(corsConfigurationSource)
+                    .and().csrf().disable().
+                    authorizeRequests().antMatchers("/user/signin*").permitAll().
+                antMatchers("/user/signup","/swagger-ui/**", "/v3/api-docs/**").permitAll().
                 anyRequest().authenticated().and().exceptionHandling().
                 authenticationEntryPoint((request, response, authException) -> {
             Map<String, Object> responseMap = new HashMap<>();
             ObjectMapper mapper = new ObjectMapper();
             response.setStatus(401);
+
             responseMap.put("error", true);
             responseMap.put("message", "Unauthorized");
             response.setHeader("content-type", "application/json");
