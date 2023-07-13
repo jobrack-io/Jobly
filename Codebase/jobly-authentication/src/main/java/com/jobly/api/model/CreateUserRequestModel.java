@@ -11,9 +11,6 @@ import javax.validation.constraints.Size;
 @Data
 public class CreateUserRequestModel {
 
-	@NotNull(message="userName  cannot be null")
-	@Size(min=2, message= "userName name must not be less than two characters")
-	private String userName;
 	@NotNull(message="First name cannot be null")
 	@Size(min=2, message= "First name must not be less than two characters")
 	private String firstName;

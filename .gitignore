@@ -1,2 +1,3 @@
 **/.DS_Store
 Codebase/jobly-authentication/target
+Codebase/jobly-authentication/src/main/resources/application.properties
