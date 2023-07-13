@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/user1")
+@RequestMapping("/users12")
 public class UserController {
 
     @GetMapping
