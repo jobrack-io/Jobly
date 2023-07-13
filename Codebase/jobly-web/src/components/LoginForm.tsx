@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { render } from 'react-dom';
+import SearchPage from '../pages/SearchPage';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -55,6 +60,8 @@ function LoginForm() {
         });
         // Handle successful form submission
         alert('Signup successful!');
+        navigate('/search', { replace: true });
+
       } catch (error) {
         // Handle error in form submission
         alert('Login failed. Please try again later.');
