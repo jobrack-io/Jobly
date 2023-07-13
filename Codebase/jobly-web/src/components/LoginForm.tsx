@@ -59,9 +59,7 @@ function LoginForm() {
           password: formData.password,
         });
         // Handle successful form submission
-        alert('Signup successful!');
         navigate('/search', { replace: true });
-
       } catch (error) {
         // Handle error in form submission
         alert('Login failed. Please try again later.');
