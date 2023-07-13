@@ -76,7 +76,7 @@ function SignupForm() {
     if (validateForm()) {
       // Perform API call using Axios or Fetch here
       try {
-        await axios.post('http://localhost:8080/user/signup', {
+        await axios.post('http://localhost:8080/signup', {
           firstname: formData.firstname,
           lastname: formData.lastname,
           email: formData.email,

@@ -49,7 +49,7 @@ function LoginForm() {
     if (validateForm()) {
       // Perform API call using Axios or Fetch here
       try {
-        await axios.post('http://localhost:8080/user/signin', {
+        await axios.post('http://localhost:8080/signin', {
           email: formData.email,
           password: formData.password,
         });
