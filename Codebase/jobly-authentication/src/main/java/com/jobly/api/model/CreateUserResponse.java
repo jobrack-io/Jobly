@@ -1,11 +1,13 @@
 package com.jobly.api.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 
 
 @Data
-public class CreateUserResponseModel {
+@Builder
+public class CreateUserResponse {
 
 	private String first_name;
 

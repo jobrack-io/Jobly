@@ -1,6 +1,6 @@
 package com.jobly.api.util;
 
-import com.jobly.api.service.UserDetailsService;
+import com.jobly.api.service.UserDetailService;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,10 +19,10 @@ import java.io.IOException;
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 
-    private final UserDetailsService jwtUserDetailsService;
+    private final UserDetailService jwtUserDetailsService;
     private final JwtTokenUtil jwtTokenUtil;
 
-    public JwtRequestFilter(UserDetailsService jwtUserDetailsService, JwtTokenUtil jwtTokenUtil) {
+    public JwtRequestFilter(UserDetailService jwtUserDetailsService, JwtTokenUtil jwtTokenUtil) {
         this.jwtUserDetailsService = jwtUserDetailsService;
         this.jwtTokenUtil = jwtTokenUtil;
     }

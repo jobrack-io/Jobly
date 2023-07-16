@@ -4,7 +4,7 @@ package com.jobly.api.model;
 import lombok.Data;
 
 @Data
-public class LoginRequestModel {
+public class LoginRequest {
 	private String email;
 	private String password;
 

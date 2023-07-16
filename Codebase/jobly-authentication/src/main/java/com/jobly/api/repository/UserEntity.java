@@ -14,11 +14,10 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long employee_id;
-
     @Column(name = "email")
     private String email;
     @Column(name = "firstName")
