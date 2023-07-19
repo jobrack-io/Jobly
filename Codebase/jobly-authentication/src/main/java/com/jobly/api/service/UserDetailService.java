@@ -25,7 +25,7 @@ public class UserDetailService implements org.springframework.security.core.user
 
 
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        UserEntity user = userRepository.findUserByEmail(email);
+        UserEntity user = userRepository.findFirstUserByEmail(email);
         List<GrantedAuthority> authorityList = new ArrayList<>();
         authorityList.add(new SimpleGrantedAuthority("USER_ROLE"));
         return new User(user.getEmail(), user.getPassword(), authorityList);
