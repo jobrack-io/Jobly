@@ -39,6 +39,7 @@ public class AuthenticationController {
     )
     @Operation(summary = "Login User", description = "Login User")
     public ResponseEntity<LoginResponse> loginUser(@RequestBody LoginRequest loginRequestModel) {
+        logger.info("logging module");
         return authenticationService.loginUser(loginRequestModel);
     }
 
