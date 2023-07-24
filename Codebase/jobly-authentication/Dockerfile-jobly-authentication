@@ -1,7 +1,7 @@
 FROM openjdk:11
 
 RUN mkdir /opt/packages
-ADD ./packages/Jobly-0.0.1-SNAPSHOT.jar /opt/packages
+ADD ../packages/Jobly-0.0.1-SNAPSHOT.jar /opt/packages
 WORKDIR /opt/packages
 
 EXPOSE 8080
