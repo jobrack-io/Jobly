@@ -1,0 +1,16 @@
+#!/bin/bash
+sudo yum update -y
+
+# Install Docker
+sudo amazon-linux-extras install docker -y
+
+# Start Docker service
+sudo service docker start
+sudo chkconfig docker on
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Pull OpenJDK Docker image
+sudo usermod -aG docker ${USER}
+sudo chmod 666 /var/run/docker.sock
+docker pull openjdk
