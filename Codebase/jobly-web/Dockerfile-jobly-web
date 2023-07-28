@@ -1,28 +1,22 @@
-# Step 1: Use the official Node.js image as the base image.
+# Use the official Node.js image as the base image.
 FROM node:16
 
 # Install the 'tar' command
 RUN apt-get update
 RUN apt-get install -y tar
 
-# Step 2: Set the working directory inside the container.
+# Set the working directory inside the container.
 RUN mkdir /opt/packages
 ADD /packages/jobly-web.tar.gz /opt/packages
-RUN cd /opt/packages
-RUN tar -xzvf jobly-web.tar.gz
 WORKDIR /opt/packages/build
 
-# # Step 3: Copy your application files to the container's working directory.
-# COPY package.json package-lock.json ./
+# Install the serve package
+RUN npm uninstall -g serve
+RUN npm i -S serve
+RUN yarn global add serve
 
-# # Step 4: Install dependencies.
-# RUN npm install
-
-# # Step 5: Copy the rest of your application files.
-# COPY . .
-
-# Step 3: Expose the port your Node.js application listens on.
+# Expose the port your Node.js application listens on.
 EXPOSE 3000
 
-# Step 4: Define the command to start your Node.js application.
+# Define the command to start your Node.js application.
 CMD ["serve", "-s", "./"]
