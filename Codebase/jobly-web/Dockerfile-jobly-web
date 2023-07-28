@@ -8,6 +8,7 @@ RUN apt-get install -y tar
 # Step 2: Set the working directory inside the container.
 RUN mkdir /opt/packages
 ADD /packages/jobly-web.tar.gz /opt/packages
+RUN cd /opt/packages
 RUN tar -xzvf jobly-web.tar.gz
 WORKDIR /opt/packages/build
 
