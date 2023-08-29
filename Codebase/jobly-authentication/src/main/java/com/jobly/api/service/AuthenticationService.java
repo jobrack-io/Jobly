@@ -59,4 +59,13 @@ public class AuthenticationService {
 
         return ResponseEntity.status(status).body(loginResponse);
     }
+
+    /**
+     * validateToken the token
+     *
+     * @param token
+     */
+    public Boolean validateToken(String token) {
+      return  jwtTokenUtil.validateToken(token);
+    }
 }

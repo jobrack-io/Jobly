@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -42,6 +41,17 @@ public class AuthenticationController {
         logger.info("logging module 1 ");
         return authenticationService.loginUser(loginRequestModel);
     }
+
+
+    @Operation(summary = "/validateToken", description = " validate the token")
+    public String validateToken(@RequestParam("token") String token) {
+      //  logger.info("logging module 1 ");
+        if(authenticationService.validateToken(token)){
+            return "valid Token" ;
+        }
+      return "not valid Token";
+    }
+
 
     @PostMapping(path = "/signup", consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE}

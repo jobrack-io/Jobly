@@ -8,7 +8,6 @@ import lombok.Data;
 @Data
 @Builder
 public class CreateUserResponse {
-
 	private String first_name;
 
 	private String message;
