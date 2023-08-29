@@ -1,0 +1,22 @@
+# Use the official Node.js image as the base image.
+FROM node:16
+
+# Install the 'tar' command
+RUN apt-get update
+RUN apt-get install -y tar
+
+# Set the working directory inside the container.
+RUN mkdir /opt/packages
+ADD /packages/jobly-web.tar.gz /opt/packages
+WORKDIR /opt/packages/build
+
+# Install the serve package
+RUN npm uninstall -g serve
+RUN npm i -S serve
+RUN yarn global add serve
+
+# Expose the port your Node.js application listens on.
+EXPOSE 3000
+
+# Define the command to start your Node.js application.
+CMD ["serve", "-s", "./"]
