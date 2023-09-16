@@ -3,16 +3,16 @@ import axios from 'axios';
 
 function SignupForm() {
   const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     confirm_password: '',
   });
 
   const [formErrors, setFormErrors] = useState({
-    firstname: '',
-    lastname: '',
+    first_name: '',
+    last_name: '',
     email: '',
     password: '',
     confirm_password: '',
@@ -28,18 +28,18 @@ function SignupForm() {
 
   const validateForm = () => {
     let isValid = true;
-    const newFormErrors:  { firstname: string; lastname: string; email: string; password: string; confirm_password: string; } = {firstname: "", lastname: "", email: "", password: "", confirm_password: ""};
+    const newFormErrors:  { first_name: string; last_name: string; email: string; password: string; confirm_password: string; } = {first_name: "", last_name: "", email: "", password: "", confirm_password: ""};
 
-    // Validate firstname
-    if (!formData.firstname) {
+    // Validate first_name
+    if (!formData.first_name) {
       isValid = false;
-      newFormErrors.firstname = 'First Name is required';
+      newFormErrors.first_name = 'First Name is required';
     }
 
-    // Validate lastname
-    if (!formData.lastname) {
+    // Validate last_name
+    if (!formData.last_name) {
       isValid = false;
-      newFormErrors.lastname = 'Last Name is required';
+      newFormErrors.last_name = 'Last Name is required';
     }
 
     // Validate email
@@ -77,8 +77,8 @@ function SignupForm() {
       // Perform API call using Axios or Fetch here
       try {
         await axios.post('http://localhost:8080/user/signup', {
-          firstname: formData.firstname,
-          lastname: formData.lastname,
+          first_name: formData.first_name,
+          last_name: formData.last_name,
           email: formData.email,
           password: formData.password,
         });
@@ -107,27 +107,27 @@ function SignupForm() {
         <div className="mb-3">
           <input
             type="text"
-            name="firstname"
+            name="first_name"
             className="form-control"
             placeholder="First Name"
-            value={formData.firstname}
+            value={formData.first_name}
             onChange={handleChange}
           />
-          {formErrors.firstname && (
-            <div className="text-danger">{formErrors.firstname}</div>
+          {formErrors.first_name && (
+            <div className="text-danger">{formErrors.first_name}</div>
           )}
         </div>
         <div className="mb-3">
           <input
             type="text"
-            name="lastname"
+            name="last_name"
             className="form-control"
             placeholder="Last Name"
-            value={formData.lastname}
+            value={formData.last_name}
             onChange={handleChange}
           />
-          {formErrors.lastname && (
-            <div className="text-danger">{formErrors.lastname}</div>
+          {formErrors.last_name && (
+            <div className="text-danger">{formErrors.last_name}</div>
           )}
         </div>
         <div className="mb-3">

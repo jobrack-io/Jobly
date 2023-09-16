@@ -43,7 +43,7 @@ public class AuthenticationController {
     }
 
 
-    @Operation(summary = "/validateToken", description = " validate the token")
+    @Operation(summary = "/userToken", description = " validate the token")
     public String validateToken(@RequestParam("token") String token) {
       //  logger.info("logging module 1 ");
         if(authenticationService.validateToken(token)){
