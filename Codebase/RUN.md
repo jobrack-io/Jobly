@@ -1,17 +1,17 @@
 # Running the application : So currently there are 4 services
 
-# # # jobly-service-registry
-# # # jobly-gateway
-# # # jobly-identity-service
-# # # jobly-userProfile-service
+### jobly-service-registry
+### jobly-gateway
+### jobly-identity-service
+### jobly-userProfile-service
 
 
 **Step 1 **:  Start the jobly-service-registry services so all the microservices can register on Jobly service registry 
 
 Run below command from jobly-service-registry folder
 
-# # mvn clean install
-# # java -jar java -jar target/jobly-service-registry-0.0.1-SNAPSHOT.jar
+## mvn clean install
+## java -jar java -jar target/jobly-service-registry-0.0.1-SNAPSHOT.jar
 
 
 After that Access the service Register http://localhost:8761/
@@ -21,9 +21,9 @@ After that Access the service Register http://localhost:8761/
 
 Run below command from jobly-gateway folder
 
-# # mvn clean install
+## mvn clean install
 
-# # java -jar java -jar target/jobly-gateway-0.0.1-SNAPSHOT.jar
+## java -jar java -jar target/jobly-gateway-0.0.1-SNAPSHOT.jar
 
 
 Now check in registry wether service got registered
@@ -44,9 +44,9 @@ spring.datasource.password = Welcome12!
 
 then run below command from jobly-identity-service folder
 
-# # mvn clean install
+## mvn clean install
 
-# # java -jar target/jobly-identity-service-0.0.1-SNAPSHOT.jar
+## java -jar target/jobly-identity-service-0.0.1-SNAPSHOT.jar
 
 Validate that wether that service is running properly or not using the service registery
 
@@ -58,9 +58,9 @@ http://localhost:8761/
 
 Run below command from jobly-identity-service folder
 
-# # mvn clean install
+## mvn clean install
 
-# # java -jar target/jobly-userProfile-service-0.0.1-SNAPSHOT.jar
+## java -jar target/jobly-userProfile-service-0.0.1-SNAPSHOT.jar
 
 Validate that wether that service is running properly or not using the service registery
 
