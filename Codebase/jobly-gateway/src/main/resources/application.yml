@@ -1,0 +1,23 @@
+spring:
+ cloud:
+   gateway:
+     routes:
+       - id: jobly-user-profile
+         uri: lb://JOBLY-USER-PROFILE
+         predicates:
+           - Path=/jobly/**
+         filters:
+           - AuthenticationFilter
+
+       - id: identity-service
+         uri: lb://IDENTITY-SERVICE
+         predicates:
+           - Path=/auth/**
+
+ application:
+   name: JOBLY-GATEWAY
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/
