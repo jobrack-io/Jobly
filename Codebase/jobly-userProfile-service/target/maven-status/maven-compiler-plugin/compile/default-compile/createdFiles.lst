@@ -1,0 +1,6 @@
+com/jobly/service/JoblyUserProfileAppService.class
+com/jobly/controller/JoblyUserProfileController.class
+com/jobly/client/UserProfileFetchService.class
+com/jobly/config/JoblyUserProfileConfig.class
+com/jobly/dto/UserResponseDTO.class
+com/jobly/JoblyAppApplication.class
