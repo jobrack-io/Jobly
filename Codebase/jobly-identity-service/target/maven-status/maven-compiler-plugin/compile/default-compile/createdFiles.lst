@@ -1,0 +1,10 @@
+com/jobly/entity/UserCredential.class
+com/jobly/IdentityServiceApplication.class
+com/jobly/controller/AuthController.class
+com/jobly/service/AuthService.class
+com/jobly/dto/AuthRequest.class
+com/jobly/repository/UserCredentialRepository.class
+com/jobly/config/CustomUserDetailsService.class
+com/jobly/config/CustomUserDetails.class
+com/jobly/service/JwtService.class
+com/jobly/config/AuthConfig.class
