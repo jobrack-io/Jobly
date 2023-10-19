@@ -1,0 +1,10 @@
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/dto/AuthRequest.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/repository/UserCredentialRepository.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/service/AuthService.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/config/AuthConfig.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/config/CustomUserDetailsService.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/service/JwtService.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/IdentityServiceApplication.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/controller/AuthController.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/config/CustomUserDetails.java
+/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/src/main/java/com/jobly/entity/UserCredential.java
