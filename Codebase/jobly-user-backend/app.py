@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import py_eureka_client.eureka_client as eureka_client
 import boto3
 import os
 
@@ -8,6 +9,14 @@ app = Flask(__name__)
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 S3_BUCKET = os.environ.get('S3_BUCKET_NAME')
+
+your_rest_server_port = 5000
+eureka_client.init(eureka_server="http://localhost:8761/eureka/",
+                                app_name="UserBackend",
+                                instance_port=your_rest_server_port)
+
+eureka_client.register()
+eureka_client.start()
 
 if not all([AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET]):
     raise ValueError("Please set the AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and S3_BUCKET_NAME environment variables.")
@@ -40,6 +49,10 @@ def upload_file():
     s3.upload_fileobj(file, S3_BUCKET, file_key)
 
     return jsonify({'message': 'File uploaded successfully'})
+
+@app.route('/user/1', methods=['GET'])
+def user(usr=1):
+    return jsonify({'message': 'user found!'})
 
 if __name__ == '__main__':
     app.run(debug=True)
