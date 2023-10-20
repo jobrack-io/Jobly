@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "be0b3ffb-3b5d-4a0c-982b-4c3cd9eb9da0",
+		"name": "Jobly",
+		"description": "Jobly Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28312541",
+		"_collection_link": "https://dark-trinity-113983.postman.co/workspace/41d18f21-bfb1-4b0e-b6ee-cafea6739f63/collection/28312541-be0b3ffb-3b5d-4a0c-982b-4c3cd9eb9da0?action=share&source=collection_link&creator=28312541"
+	},
+	"item": [
+		{
+			"name": "AuthenticanService",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"inesh\",\n    \"password\" : \"inesh1234\",\n    \"email\" : \"inesh@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" :\"inesh\",\n    \"password\" :\"inesh1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validateToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/auth/validate?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbmVzaCIsImlhdCI6MTY5NzczNTQxOCwiZXhwIjoxNjk3NzM3MjE4fQ.Tl7EPjNPPRDsnuAYM2kgCbNxbsgSObkMsH1uu0-nRTQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"validate"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbmVzaCIsImlhdCI6MTY5NzczNTQxOCwiZXhwIjoxNjk3NzM3MjE4fQ.Tl7EPjNPPRDsnuAYM2kgCbNxbsgSObkMsH1uu0-nRTQ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProfileService",
+			"item": [
+				{
+					"name": "UserProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpbmVzaCIsImlhdCI6MTY5Nzc0MzE3MywiZXhwIjoxNjk3NzQ0OTczfQ.IBCx71tDvdiXQob9nBhiwRkLQKoJsaouPlVu_1dat4Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jobly/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobly",
+								"home"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
