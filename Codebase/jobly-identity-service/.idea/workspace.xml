@@ -5,63 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbc203ca-6113-42d3-a129-8580bb709cab" name="Changes" comment="added idenity server">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/IdentityServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/config/AuthConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/config/CustomUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/config/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/dto/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/entity/UserCredential.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/repository/UserCredentialRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jobly/service/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jobly/IdentityServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/IdentityServiceApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/config/AuthConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/config/CustomUserDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/config/CustomUserDetailsService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/controller/AuthController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/dto/AuthRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/entity/UserCredential.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/repository/UserCredentialRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/service/AuthService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/jobly/service/JwtService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/jobly-identity-service-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/jobly-identity-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.jobly.IdentityServiceApplicationTests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.jobly.IdentityServiceApplicationTests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jobly/IdentityServiceApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/identity-service-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/identity-service-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/identity-service-qa.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/identity-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/jobly-gateway-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/jobly-gateway-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/jobly-gateway-qa.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../configserver/src/main/resources/config/jobly-gateway.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jobly-gateway/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../configserver/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/src/main/java/com/eaztbytes/configserver/ConfigserverApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/src/main/java/com/eaztbytes/configserver/ConfigserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/src/main/java/com/jobly/configserver/ConfigserverApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../configserver/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../configserver/src/main/resources/config/jobly-dev.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../configserver/src/main/resources/config/jobly-prod.properties" beforeDir="false" />
@@ -69,13 +26,9 @@
       <change beforePath="$PROJECT_DIR$/../configserver/src/main/resources/jobly-dev.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../configserver/src/main/resources/jobly-prod.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../configserver/src/main/resources/jobly.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/src/test/java/com/eaztbytes/configserver/ConfigserverApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobly-authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-authentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobly-authentication/src/main/java/com/jobly/api/config/JoblyServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-authentication/src/main/java/com/jobly/api/config/JoblyServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobly-authentication/src/main/java/com/jobly/api/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-authentication/src/main/java/com/jobly/api/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobly-authentication/src/main/java/com/jobly/api/util/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-authentication/src/main/java/com/jobly/api/util/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobly-authentication/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-authentication/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobly-authentication/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-authentication/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configserver/src/test/java/com/eaztbytes/configserver/ConfigserverApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/src/test/java/com/jobly/configserver/ConfigserverApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobly-gateway/jobly-gateway.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../jobly-gateway/jobly-gateway.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,16 +58,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/pom.xml",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/raj/Documents/Tools/Jobly/Codebase/jobly-identity-service/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="IdentityServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jobly.IdentityServiceApplication" />
