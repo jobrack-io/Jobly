@@ -12,11 +12,8 @@ S3_BUCKET = os.environ.get('S3_BUCKET_NAME')
 
 your_rest_server_port = 5000
 eureka_client.init(eureka_server="http://localhost:8761/eureka/",
-                                app_name="UserBackend",
+                                app_name="JOBLY-USER-BACKEND",
                                 instance_port=your_rest_server_port)
-
-eureka_client.register()
-eureka_client.start()
 
 if not all([AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, S3_BUCKET]):
     raise ValueError("Please set the AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and S3_BUCKET_NAME environment variables.")
